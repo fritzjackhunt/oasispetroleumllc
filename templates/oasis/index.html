@@ -3,84 +3,129 @@
 
 {% block content %}
 
-    <!--Jumbotron video section STARTS-->
-    <video autoplay muted loop id="myVideo" style="width: 1277px;">
-        <source src="{% static 'videos/home-video.mp4' %}" type="video/mp4">
-    </video>
-    <!--Jumbotron video section ENDS-->
+    <!--Jumbotron slider section STARTS-->
+    <div id="carouselExampleIndicators" class="carousel slide d-none d-sm-block" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'pictures/slide-1.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'pictures/slide-2.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'pictures/slide-3.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+    
+    <div id="carouselExampleIndicators" class="carousel slide d-block d-sm-none" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'pictures/slide-1.jpg' %}" class="d-block w-100" alt="..." style="height: 400px;">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'pictures/slide-2.jpg' %}" class="d-block w-100" alt="..." style="height: 400px;">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'pictures/slide-3.jpg' %}" class="d-block w-100" alt="..." style="height: 400px;">
+        </div>
+      </div>
+    </div>
+  <!--Jumbotron slider section ENDS-->
 
     <!--Header text section STARTS-->
-    <div class="container">
+    <div class="container" id="jumbotron">
       <div class="row hero-1">
-        <div class="col-lg-6" id="header-text">
-          <div>
-            <h1>THE ONLY OIL REFINERY IN UFD </h1>
-            <p>LLC Sochi-Neft Refinery is the only oil refinery in Krasnodar Territory and South Caucasus Region, conveniently located on a developed logistic network, which enables to market oil produc territory and in adjacent Districts.</p>
-          </div>
+        <div class="col-lg-8 col-12" id="header-text">
           
           <div>
-            <a href="#" class="btn btn-primary rounded-pill" style="margin-right: 20px;" role="button">Get a Quote</a>
-            <a href="#" class="btn btn-dark rounded-pill" role="button">View Materials Catalog</a>
+            <span class="white">Welcome To</span>
+            <h1>OASIS PETROLEUM LLC</h1>
+            <p>Oasis petroleum LLC operates as an exploration and production company. The Company offers acquisition and development of oil and natural gas resources.</p>
           </div>
-        </div>
+          
+          <div class="d-none d-lg-block">
+            <a href="#" class="btn btn-quote btn-primary rounded-pill" style="margin-right: 20px;" role="button">Get a Quote</a>
+            <a href="#" class="btn btn-materials btn-dark rounded-pill" role="button">View Materials Catalog</a>
+          </div>
 
-         <div class="row my-5 pb-3" id="header-tape">
-            <div class="col-lg-3 pt-3">
+         <div class="row my-5 pb-3 
+         d-none d-lg-block d-xl-none" id="header-tape">
+            <div class="col-lg-3 col-12 pt-3">
               <div class="bl"></div>
               <div class="tape">
                 <p>98%</p>
                 <span>PROCESSING DEPTH</span>
               </div>
             </div>
-            <div class="col-lg-3 pt-3">
+            <div class="col-lg-3 col-12 pt-3">
               <div class="bl"></div>
               <div class="tape">
                 <p>Euro-5</p>
                 <span>DIESEL FUEL</span>
               </div>
             </div>
-            <div class="col-lg-3 pt-3">
+            <div class="col-lg-3 col-12 pt-3">
               <div class="bl"></div>
               <div class="tape">
                 <p>Euro-5</p>
                 <span>GASOLINE</span>
               </div>
             </div>
-            <div class="col-lg-3 pt-3">
+            <div class="col-lg-3 col-12 pt-3">
               <div class="bl"></div>
               <div class="tape">
-                <p>2000 PPL</p>
-                <span>STAF</span>
+                <p></p>
+                <span>JET FUEL</span>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
     <!--Header text section ENDS-->
 
-    <!--About section STARTS-->
-    <section id="about" style="width: 1277px; height: 995px; object-fit: cover; object-position: 50% 50%;">
-      <div class="container">
-        <div class="row">
-          <div class="" id="about-header">
-            <span>About the Company</span>
-          </div>
+    <!--About Section STARTS-->
 
-          <div class="col-lg-10">
-            <img src="{% static 'pictures/photoroom.webp' %}" class="d-block" alt="...">
+    <section>
+      <div class="container d-none d-xl-block d-xxl-none">
+        <div class="row about-content">
+          <div class="col-lg-10 col-12">
+            <div class="" id="about-header">
+              <span>About the Company</span>
+            </div>
 
-            <p>LLC Sochi-Neft Refinery is unique due to the fact that it is first in Russia (in 37 years) private but not a state-run, independent of Vertical Integrated Oil Companies, commercial, constructed from the scratch oil refinery connected to the oil trunk pipeline (total capacity equals to 9.8 MTPA) and product trunk pipeline (total capacity equals to 8.5 MTPA) which capacity equals 9.8 MTPA, the quality of diesel complies with Euro-5 standard and in 2016 the processing depth has grown up to 98%. In 2020 the quality of gasolines complied with Euro-5 standard.</p>
+            <img src="{% static 'pictures/photoroom.webp' %}" class="d-block about-picture" alt="...">
 
-            <p>Today,  Sochi-Neft Oil Refinery is a modern, open, dynamic company heavily investing in the construction of new and upgrading of existing facilities and planning a diversified development of the production base in central Russia to improve the efficiency of natural resources utilization and increase the production of petroleum products meeting the highest quality standards by implementing the most cutting edge deep conversion processes.</p>
+            <p>Oasis petroleum LLC is an industrious U.S oil and gas production company with a premier Williston Basin acreage position. Led by a management team with extensive industry experience, Oasis Petroleum acquires, exploits, develops and explores for crude oil, natural gas, and natural gas liquids, helping to supply the energy that powers and improves daily life around the world.</p>
 
-            <p>The Refinery occupies its rightful place among the largest players of the Russian oil refining industry, forming the Krasnodar and South Caucasus Region, oil refinery market, and is known far abroad.</p>
-          </div>
+            <p>As a top-tier operator, we create value for our team members, and positive impacts in our communities with a commitment to excellence and a continious improvement approach. Innovation, collaboration, diverse views, and teamwork inform every area of our purpose-driven wirk that puts the safety and well-being of people and the environment first.</p>
+
+            <p>Oasis petroleum LLC is committed to the preservation of the environment, protection of heritage and cultural landmarks, safe work environments, employee safety, and respect for local residents. Oasis petroleum LLC has placed sustainability and responsible development at the core of our strategy since we began operations. Our vision of sustainability encompasses respect for the environment, building positive and constructive relationships with our customers and the communities in which we operate, and providing a safe work environment for our employees and service providers.</p>
+
+            <p>When we decide to permanently cease operations of any of our pipeline or storage systems, we follow all safety and environmental applicable laws and regulations. Through the abandonment process, we work with regulatory bodies to ensure that we do what's best for the environment and the people living around the pipeline.</p>
+          </div> 
         </div>
       </div>
     </section>
-    <!--About section ENDS-->
+
+    <!--About Section ENDS-->
 
     <!--Projects section STARTS-->
+    <video autoplay muted loop id="myVideo">
+      <source src="{% static 'videos/oasis.mp4' %}" type="video/mp4">
+    </video>
+
     <section id="projects">
       <div class="container">
         <div class="row">
@@ -95,7 +140,9 @@
                   <i class="fas fa-microchip"></i>
                 </div>
                 <p>Technology</p>
-                <span>We Deliver State-Of-The Art Manufacturing Process Technologies, Catalysts And Technical Services To Bring Consistent Value To Our Customers.</span>
+                <span>
+                  We Deliver State-Of-The Art Manufacturing Process Technologies, Catalysts And Technical Services To Bring Consistent Value To Our Customers.
+                </span>
               </div>
 
               <div class="col-lg-6">
@@ -103,7 +150,7 @@
                   <i class="fas fa-database"></i>
                 </div>
                 <p>Fuels</p>
-                <span>Our Refinery Has A Heavy, High-Sulfur Crude Oil Processing Capacity Of Approximately 268,000 Barrels Per Day. This Facility Produces Gasoline And Fuel Components, Low-Sulfur Diesel, Jet Fuel And Lubricants.</span>
+                <span>Our company has a heavy high-Sulphur Crude oil processing caapacity of approximately 268,000 barrels per day. This fascility produces gasoline and fuel components, low-Sulphur diesel, jet fuel and lubricants</span>
               </div>
 
               <div class="col-lg-6 mt-2">
@@ -119,7 +166,7 @@
                   <i class="fas fa-burn"></i>
                 </div>
                 <p>Energy and Power</p>
-                <span>LLC Sochi-Neft Refinery is involved in field development in remote, undeveloped regions, completely lacking any utilities infrastructure.</span>
+                <span>Oasis petroleum LLC is involved in field development in remote, undeveloped regions, completely lacking any utilities infrastructure.</span>
               </div>
             </div>
           </div>
@@ -160,7 +207,7 @@
           </div>
 
           <div class="col-lg-4">
-            <img src="{% static 'pictures/aviation.webp' %}" class="img-fluid" alt="">
+            <img src="{% static 'pictures/tank1.jpg' %}" class="img-fluid" alt="">
             <div>
               <span>Aviation Fuel</span>
             </div>    
@@ -174,7 +221,7 @@
           </div>
 
           <div class="col-lg-4">
-            <img src="{% static 'pictures/bunkering.webp' %}" class="img-fluid" alt="">
+            <img src="{% static 'pictures/bunkering1.jpg' %}" class="img-fluid" alt="">
             <div>
               <span>Bunkering</span>
             </div>    
@@ -207,7 +254,7 @@
             <div class="technologies-bl"></div>
             <div class="tape-technoloies">
               <span>
-                The refinery produces petroleum products with high-quality performance and environmental characteristics, including motor fuels, aromatics, liquid paraffin, roofing and insulation materials, etc. Diesel fuel, jet fuel, roofing materials and bitumens produced by the refinery meet international quality standards.
+                Our petroleum products are produced with high-quality performance and environmental characteristics, including motor fuels, aromatics, liquid paraffin, roofing and insulution materials e.t.c. Diesel fuel, jet fuel and bitumens produced by the meet international quality standards
               </span>
             </div>
 
@@ -217,7 +264,7 @@
               </div>
               <div class="col-lg-9 ps-0 text-white pt-1">
                 <p class="mb-0 fw-bold">OIL REFINING</p>
-                <span>OASIS PETROLEUM LLC</span>
+                <span>Oasis petroleum LLC </span>
               </div>
             </div>
 
@@ -227,7 +274,7 @@
             <div class="technologies-bl"></div>
             <div class="tape-technoloies">
               <span>
-                LLC Sochi-Neft Refinerypays special attention to the operating activity in the field of gas production and transportation, its processing volume growth and electricity generation increase at the Company's own power plants.
+                Oasis petroleum LLC pays special attention to the operating activity in gas production and transportation, its processing volume growth, and electricity generation increase at the Company's own power plants.
               </span>
             </div>
 
@@ -237,7 +284,7 @@
               </div>
               <div class="col-lg-9 ps-0 text-white pt-1">
                 <p class="mb-0 fw-bold">GAS PRODUCTION AND USE</p>
-                <span>OASIS PETROLEUM LLC</span>
+                <span>Oasis petroleum LLC </span>
               </div>
             </div>
           </div>
@@ -246,7 +293,7 @@
             <div class="technologies-bl"></div>
             <div class="tape-technoloies">
               <span>
-                Strengthening and expanding the resource base is one of the Company's strategic objectives. The sound resource base ensures the stability of production activities and achievement of targeted volumes of hydrocarbon production. The Company’s fields and license blocks are located in three oil and gas provinces - Krasnodar Region.
+                Strengthening and expanding the resource base in the company's strategic objectives. The sound resource base ensures the stability of production activities and the achievement of targeted hydrocarbon production volumes.
               </span>
             </div>
 
@@ -256,7 +303,7 @@
               </div>
               <div class="col-lg-9 ps-0 text-white pt-1">
                 <p class="mb-0 fw-bold">EXPLORATION AND PRODUCTION</p>
-                <span>OASIS PETROLEUM LLC</span>
+                <span>Oasis petroleum LLC </span>
               </div>
             </div>
           </div>
@@ -269,7 +316,7 @@
     <section id="laboratory" class="py-5">
       <div class="container">
         <div class="row">
-          <div class="col-lg-11 text-white mx-5 my-5 text-center">
+          <div class="col-lg-11 col-12 text-white  my-5 text-center">
             <h2 class="fw-bold">Laboratory</h2>
           </div>
         </div>
@@ -277,9 +324,6 @@
   
       <div class="container horizontal-scrollable">
         <div class="row flex-nowrap">
-          <div class="col-lg-3">
-            <img src="{% static 'pictures/lab-0.webp' %}" class="img-fluid" alt="">
-          </div>
           <div class="col-lg-3">
             <img src="{% static 'pictures/lab-1.webp' %}" class="img-fluid" alt="">
           </div>
@@ -319,7 +363,7 @@
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <p>
-                      LLC Sochi-Neft performs the following activities in the field of engineering:
+                      Oasis petroleum LLC performs the following activities in the field of engineering:
                     </p> 
 
                     <p>
@@ -333,10 +377,7 @@
                     <p>
                       Engineering support: consulting, technical assessment, technical assumptions, cost estimation, supervision for compliance with the applicable requirements.
                     </p>
-                    
-                    <p>
-                      Projects: Yugo-Zapadnaya power plant, offshore ice-resistant platform LSP-1 on the Korchagin oil and gas field, gasification facilities in Belarus, Irkutsk Region, Samara Region, power distribution facilities of the Kalinin nuclear power plant (unit 4), Gazelle gas pipeline (Czech Republic), Sheiba-Abqaiq oil pipeline (Saudi Arabia), gas processing plant -1 (Syria), East-West gas pipeline (India).
-                    </p>
+                  
                   </div>
                 </div>
               </div>
@@ -351,20 +392,17 @@
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <p>
-                      LLC Sochi-Neft Refinery has considerable experience in the field of procurement, particularly in the delivery of process equipment for Russian and international projects.
+                      Oasis petroleum LLC has considerable experience in the field of procurement, particularly in the delivery of process equipment in the USA and international projects.
                     </p> 
 
                     <p>
-                      Sochi-Neft activity is based not only on its obligations to supply the up-to-date equipment in due time but also on establishment and further development of long-term partnership with the leading equipment suppliers.
+                      Oasis petroleum LLC activity is based not only on its obligations to supply the up-to-date equipment in due time but also on establishment and further development of long-term partnership with the leading equipment suppliers.
                     </p>
                     
                     <p>
-                      In 2013, Sochi-Neft entered into the strategic agreements on technical and commercial cooperation with Siemens Ltd. in the field of procurement of electric equipment and services for construction and overhaul of power grid facilities, as well as electric power generation facilities in Russia.
+                      In 2019, Oasis petroleum LLC entered into the strategic agreements on technical and commercial cooperation with Siemens Ltd. in the field of procurement of electric equipment and services for construction and overhaul of power grid facilities, as well as electric power generation facilities.
                     </p>
-                    
-                    <p>
-                      Cooperation with the leading Russian manufacturers is actively encouraged as well. In 2013, Sochi-Neft singed memorandum of partnership with Taman Electromechanical Plant when implementing the projects of fuel and energy sector.
-                    </p>
+                  
                   </div>
                 </div>
               </div>
@@ -379,23 +417,23 @@
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <p>
-                      LLC Sochi-Neft Refinery has implemented over 70 projects in 19 countries for a period of 24 years.
+                      Oasis petroleum LLC has implemented over 70 projects in 19 countries.
                     </p>
                     
                     <p>
-                      Within the period Sochi-Neft has built over 13000 km of pipelines nearly 4000 km of gas distribution networks and 50 gas compressor stations, reconstructed 19 gas compressor stations, developed 40 oil and gas fields.
+                      Within the period Oasis petroleum LLC has built over 13000 km of pipelines nearly 4000 km of gas distribution networks and 50 gas compressor stations, reconstructed 19 gas compressor stations, developed 40 oil and gas fields.
                     </p>
                     
                     <p>
-                      In the field of power transmission Sochi-Neft has constructed over 1500 km of overhead lines and substations for Unified Power System of Russia with total transformer capacity of 9000 MVA.
+                      In the field of power transmission Oasis petroleum LLC has constructed over 1500 km of overhead lines and substations for Unified Power System with total transformer capacity of 9000 MVA.
                     </p>
                     
                     <p>
-                      In power generation Sochi-Neft has been involved in construction of five nuclear and power plants with total output of 3105 MW.
+                      n power generation Oasis petroleum LLC has been involved in construction of five nuclear and power plants with total output of 3105 MW.
                     </p>
                     
                     <p>
-                      The current priority of Sochi-Neft is to increase its competence in oil and gas, energy, industrial, civil and transport infrastructure construction, as well as to develop a new activity related to industrial ecology.
+                      The current priority of Oasis petroleum LLC is to increase its competence in oil and gas, energy, industrial, civil and transport infrastructure construction, as well as to develop a new activity related to industrial ecology.
                     </p>
                   </div>
                 </div>
@@ -405,19 +443,15 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingFour">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    project Management
+                    Project Management
                   </button>
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <p>
-                      Acting as a general contractor, Sochi-Neft Refinery is involved not only in engineering process, delivery of products and materials, construction of facilities, but also in integrated project management. For this purpose, Sochi-Neft accumulates the best world practices and uses the most advance technologies in project management.
+                      Acting as a general contractor, Oasis petroleum LLC is involved not only in engineering process, delivery of products and materials, construction of facilities, but also in integrated project management. For this purpose, Oasis petroleum LLC accumulates the best world practices and uses the most advance technologies in project management.
                     </p>
                    
-
-                    <p>
-                      In particular, the best solutions are obtained by Sochi-Neft under the memorandum of partnership with Atomenergoproekt and Vedeneev Russian National Hydraulic Engineering Research Institute (integrated in RusHydro) signed in 2012. The memorandum provides for set-up of joint centre of project management competences, a platform for exchange of knowledge and best practices in this field.
-                    </p>
                   </div>
                 </div>
               </div>
